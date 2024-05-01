@@ -5,12 +5,11 @@ export default ({ env }) => ({
       host: env("DATABASE_HOST", "127.0.0.1"),
       port: env.int("DATABASE_PORT", 5432),
       database: env("DATABASE_NAME", "strapi"),
-      user: env("DATABASE_USERNAME", ""),
-      password: env("DATABASE_PASSWORD", ""),
-      ssl: env("DATABASE_SSL", false),
-    },
-    ssl: {
-      rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false),
+      user: env("DATABASE_USERNAME", null),
+      password: env("DATABASE_PASSWORD", null),
+      ssl: {
+        rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false),
+      },
     },
     useNullAsDefault: true,
   },
