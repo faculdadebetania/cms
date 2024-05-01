@@ -9,6 +9,9 @@ export default ({ env }) => ({
       password: env("DATABASE_PASSWORD", ""),
       ssl: env("DATABASE_SSL", false),
     },
+    ssl: {
+      rejectUnauthorized: env.bool("DATABASE_SSL_SELF", false),
+    },
     useNullAsDefault: true,
   },
 });
