@@ -7,9 +7,7 @@ export default ({ env }) => ({
       database: env("DATABASE_NAME", "strapi"),
       user: env("DATABASE_USERNAME", null),
       password: env("DATABASE_PASSWORD", null),
-      ssl: {
-        rejectUnauthorized: false,
-      },
+      ssl: false,
     },
     useNullAsDefault: true,
   },
