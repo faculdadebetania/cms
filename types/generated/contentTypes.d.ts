@@ -749,6 +749,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     cover: Schema.Attribute.Media & Schema.Attribute.Required;
     date: Schema.Attribute.Date & Schema.Attribute.Required;
     author: Schema.Attribute.Relation<'manyToOne', 'api::author.author'>;
+    slug: Schema.Attribute.UID<'title'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
