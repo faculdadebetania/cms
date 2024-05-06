@@ -10,7 +10,7 @@ export default ({ env }) => ({
           },
           region: env("AWS_REGION"),
           params: {
-            Bucket: env("AWS_BUCKET_NAME"),
+            Bucket: env("AWS_BUCKET"),
           },
         },
       },
