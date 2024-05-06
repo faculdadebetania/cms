@@ -15,5 +15,13 @@ export default ({ env }) => ({
         },
       },
     },
+    actionOptions: {
+      upload: {
+        ACL: null,
+      },
+      uploadStream: {
+        ACL: null,
+      },
+    },
   },
 });
