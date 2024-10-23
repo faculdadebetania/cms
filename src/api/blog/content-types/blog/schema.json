@@ -37,10 +37,6 @@
       "relation": "manyToOne",
       "target": "api::author.author",
       "inversedBy": "articles"
-    },
-    "slug": {
-      "type": "uid",
-      "targetField": "title"
     }
   }
 }
