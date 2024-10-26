@@ -612,6 +612,11 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<'presencial'>;
     durationUnit: Schema.Attribute.Enumeration<['dias', 'meses', 'anos']> &
       Schema.Attribute.Required;
+    paymentRecurrence: Schema.Attribute.Enumeration<
+      ['m\u00EAs', '\u00FAnico']
+    > &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'m\u00EAs'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

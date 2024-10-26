@@ -100,6 +100,15 @@
         "anos"
       ],
       "required": true
+    },
+    "paymentRecurrence": {
+      "type": "enumeration",
+      "enum": [
+        "mês",
+        "único"
+      ],
+      "required": true,
+      "default": "mês"
     }
   }
 }
