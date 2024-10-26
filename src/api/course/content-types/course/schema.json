@@ -109,6 +109,13 @@
       ],
       "required": true,
       "default": "mês"
+    },
+    "startDateType": {
+      "type": "enumeration",
+      "enum": [
+        "dia",
+        "mês"
+      ]
     }
   }
 }
