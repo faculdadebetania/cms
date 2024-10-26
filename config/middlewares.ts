@@ -13,6 +13,7 @@ export default [
             "data:",
             "blob:",
             "dl.airtable.com",
+            "*.strapi.io",
             `${process.env.AWS_BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com`,
           ],
           "media-src": [
@@ -20,6 +21,7 @@ export default [
             "data:",
             "blob:",
             "dl.airtable.com",
+            "*.strapi.io",
             `${process.env.AWS_BUCKET}.s3.${process.env.AWS_REGION}.amazonaws.com`,
           ],
           upgradeInsecureRequests: null,

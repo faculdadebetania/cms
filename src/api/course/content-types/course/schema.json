@@ -4,111 +4,101 @@
   "info": {
     "singularName": "course",
     "pluralName": "courses",
-    "displayName": "Course"
+    "displayName": "Course",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {
-    "i18n": {
-      "localized": true
-    }
-  },
+  "pluginOptions": {},
   "attributes": {
-    "title": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+    "name": {
+      "pluginOptions": {},
       "type": "string",
       "unique": true,
       "required": true
     },
     "price": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "pluginOptions": {},
       "type": "decimal",
       "required": true
     },
-    "period": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "night"
-      ],
-      "required": true,
-      "default": "night"
-    },
     "duration": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "integer",
+      "pluginOptions": {},
+      "type": "decimal",
       "required": true,
       "min": 1
     },
-    "durationUnit": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "enumeration",
-      "enum": [
-        "days",
-        "months",
-        "years"
-      ],
-      "required": true,
-      "default": "days"
-    },
     "startDate": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "pluginOptions": {},
       "type": "date",
       "required": true
     },
-    "modality": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+    "slug": {
+      "pluginOptions": {},
+      "type": "uid",
+      "required": true,
+      "targetField": "name"
+    },
+    "priceDisclaimer": {
+      "pluginOptions": {},
+      "type": "string"
+    },
+    "weekDays": {
+      "pluginOptions": {},
+      "type": "customField",
+      "default": "[]",
+      "options": [
+        "seg.",
+        "ter.",
+        "qua.",
+        "qui.",
+        "sex.",
+        "sáb.",
+        "dom."
+      ],
+      "customField": "plugin::multi-select.multi-select",
+      "required": true,
+      "min": 1
+    },
+    "period": {
+      "pluginOptions": {},
       "type": "enumeration",
       "enum": [
-        "in-person",
-        "online",
-        "in-person/online"
+        "noturno"
       ],
       "required": true,
-      "default": "in-person"
+      "default": "noturno"
     },
     "category": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
+      "pluginOptions": {},
       "type": "enumeration",
       "enum": [
-        "bachelor's",
-        "post-graduate",
-        "non-certified"
+        "bacharelado",
+        "pós-graduação",
+        "curso livre"
       ],
-      "default": "non-certified",
+      "required": true
+    },
+    "modality": {
+      "pluginOptions": {},
+      "type": "enumeration",
+      "enum": [
+        "presencial",
+        "presencial/online",
+        "online"
+      ],
+      "default": "presencial",
+      "required": true
+    },
+    "durationUnit": {
+      "pluginOptions": {},
+      "type": "enumeration",
+      "enum": [
+        "dias",
+        "meses",
+        "anos"
+      ],
       "required": true
     }
   }

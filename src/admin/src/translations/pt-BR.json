@@ -1,0 +1,21 @@
+{
+    "Name": "Nome",
+    "price": "Preço",
+    "duration": "Duração",
+    "startDate": "Data de início",
+    "priceDisclaimer": "Disclaimer do preço",
+    "weekDays": "Dias da semana",
+    "period": "Período",
+    "category": "Categoria",
+    "modality": "Modalidade",
+    "durationUnit": "Unidade",
+    "Author": "Autor",
+    "Blog": "Blog",
+    "Course": "Curso",
+    "Documents": "Documento",
+    "Faculty": "Docente",
+    "User": "Usuário",
+    "cloud.plugin.name": "Deploy",
+    "content-manager.plugin.name": "Gerenciador de Conteúdo",
+    "content-manager.containers.Edit.save": "Salvar"
+}

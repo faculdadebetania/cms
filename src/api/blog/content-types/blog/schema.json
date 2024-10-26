@@ -8,7 +8,7 @@
     "description": ""
   },
   "options": {
-    "draftAndPublish": true
+    "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
@@ -42,6 +42,9 @@
       "type": "uid",
       "targetField": "title",
       "required": true
+    },
+    "test": {
+      "type": "blocks"
     }
   }
 }
