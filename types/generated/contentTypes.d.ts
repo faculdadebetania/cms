@@ -618,6 +618,8 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'m\u00EAs'>;
     startDateType: Schema.Attribute.Enumeration<['dia', 'm\u00EAs']>;
+    classSchedule: Schema.Attribute.String;
+    faculties: Schema.Attribute.Relation<'manyToMany', 'api::faculty.faculty'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
@@ -648,6 +650,7 @@ export interface ApiFacultyFaculty extends Struct.CollectionTypeSchema {
     academicBackground: Schema.Attribute.Text & Schema.Attribute.Required;
     name: Schema.Attribute.String & Schema.Attribute.Required;
     photo: Schema.Attribute.Media<'images'> & Schema.Attribute.Required;
+    courses: Schema.Attribute.Relation<'manyToMany', 'api::course.course'>;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;

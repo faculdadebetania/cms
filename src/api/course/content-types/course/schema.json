@@ -116,6 +116,15 @@
         "dia",
         "mês"
       ]
+    },
+    "classSchedule": {
+      "type": "string"
+    },
+    "faculties": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::faculty.faculty",
+      "inversedBy": "courses"
     }
   }
 }
