@@ -636,6 +636,69 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiDegreeDegree extends Struct.CollectionTypeSchema {
+  collectionName: 'degrees';
+  info: {
+    singularName: 'degree';
+    pluralName: 'degrees';
+    displayName: 'Degree';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    name: Schema.Attribute.String &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 2;
+      }>;
+    cpf: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 14;
+        maxLength: 14;
+      }> &
+      Schema.Attribute.DefaultTo<'099.518.649-96'>;
+    course: Schema.Attribute.String & Schema.Attribute.Required;
+    consignor: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'FACULDADE TEOLO\u0301GICA BETA\u0302NIA - 17288'>;
+    register: Schema.Attribute.String & Schema.Attribute.Required;
+    entryDate: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 9;
+        maxLength: 9;
+      }>;
+    completionDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    expeditionDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    registerDate: Schema.Attribute.Date & Schema.Attribute.Required;
+    expeditionNumber: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 1;
+      }>;
+    registerNumber: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.SetMinMaxLength<{
+        minLength: 1;
+      }>;
+    douDate: Schema.Attribute.Date;
+    createdAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    publishedAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::degree.degree'
+    > &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiDocDoc extends Struct.CollectionTypeSchema {
   collectionName: 'docs';
   info: {
@@ -1079,6 +1142,7 @@ declare module '@strapi/strapi' {
       'api::author.author': ApiAuthorAuthor;
       'api::blog.blog': ApiBlogBlog;
       'api::course.course': ApiCourseCourse;
+      'api::degree.degree': ApiDegreeDegree;
       'api::doc.doc': ApiDocDoc;
       'api::faculty.faculty': ApiFacultyFaculty;
       'admin::permission': AdminPermission;

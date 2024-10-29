@@ -1,0 +1,72 @@
+{
+  "kind": "collectionType",
+  "collectionName": "degrees",
+  "info": {
+    "singularName": "degree",
+    "pluralName": "degrees",
+    "displayName": "Degree"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "minLength": 2
+    },
+    "cpf": {
+      "type": "string",
+      "regex": "^[Xx]{3}\\.\\d{3}\\.\\d{3}-[Xx]{2}$",
+      "required": true,
+      "maxLength": 14,
+      "default": "099.518.649-96",
+      "minLength": 14
+    },
+    "course": {
+      "type": "string",
+      "required": true
+    },
+    "consignor": {
+      "type": "string",
+      "default": "FACULDADE TEOLÓGICA BETÂNIA - 17288",
+      "required": true
+    },
+    "register": {
+      "type": "string",
+      "required": true
+    },
+    "entryDate": {
+      "type": "string",
+      "required": true,
+      "regex": "/^\\d{4} \\/ \\d+º$/",
+      "minLength": 9,
+      "maxLength": 9
+    },
+    "completionDate": {
+      "type": "date",
+      "required": true
+    },
+    "expeditionDate": {
+      "type": "date",
+      "required": true
+    },
+    "registerDate": {
+      "required": true,
+      "type": "date"
+    },
+    "expeditionNumber": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "registerNumber": {
+      "type": "string",
+      "required": true,
+      "minLength": 1
+    },
+    "douDate": {
+      "type": "date"
+    }
+  }
+}
