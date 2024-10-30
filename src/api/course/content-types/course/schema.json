@@ -127,7 +127,7 @@
       "inversedBy": "courses"
     },
     "curriculum": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

@@ -620,7 +620,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
     startDateType: Schema.Attribute.Enumeration<['dia', 'm\u00EAs']>;
     classSchedule: Schema.Attribute.String;
     faculties: Schema.Attribute.Relation<'manyToMany', 'api::faculty.faculty'>;
-    curriculum: Schema.Attribute.String;
+    curriculum: Schema.Attribute.Text;
     createdAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     publishedAt: Schema.Attribute.DateTime;
