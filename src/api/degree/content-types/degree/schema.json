@@ -4,7 +4,8 @@
   "info": {
     "singularName": "degree",
     "pluralName": "degrees",
-    "displayName": "Degree"
+    "displayName": "Degree",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -39,7 +40,6 @@
     "entryDate": {
       "type": "string",
       "required": true,
-      "regex": "/^\\d{4} \\/ \\d+º$/",
       "minLength": 9,
       "maxLength": 9
     },

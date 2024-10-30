@@ -642,6 +642,7 @@ export interface ApiDegreeDegree extends Struct.CollectionTypeSchema {
     singularName: 'degree';
     pluralName: 'degrees';
     displayName: 'Degree';
+    description: '';
   };
   options: {
     draftAndPublish: false;
