@@ -42,9 +42,6 @@
       "type": "uid",
       "targetField": "title",
       "required": true
-    },
-    "test": {
-      "type": "blocks"
     }
   }
 }
