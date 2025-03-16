@@ -5,15 +5,15 @@ export default factories.createCoreController(
   ({ strapi }) => ({
     async slugs(ctx) {
       try {
-        const slugs: Array<{ slug: string }> = await strapi.db
+        const result: Array<{ slug: string }> = await strapi.db
           .query("api::blog.blog")
           .findMany({
             select: ["slug"],
           });
 
-        const data = slugs.map(({ slug }) => slug);
+        const slugs = result.map(({ slug }) => slug);
 
-        return { data };
+        return { data: { slugs } };
       } catch (error) {
         ctx.throw(500, error);
         return { error };
