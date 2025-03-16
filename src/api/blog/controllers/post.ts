@@ -19,7 +19,7 @@ export default factories.createCoreController(
           where,
         });
 
-        if (!post) return ctx.throw("Post not found", 500);
+        if (!post) return ctx.throw("Post not found", 404);
 
         return { data: post };
       } catch (error) {
