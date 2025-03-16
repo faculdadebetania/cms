@@ -9,7 +9,15 @@ export default factories.createCoreController(
   ({ strapi }) => ({
     async random(ctx) {
       try {
-        const totalPosts = await strapi.db.query("api::blog.blog").count();
+        const { slug } = ctx.query;
+
+        const where: { slug?: unknown } = {};
+
+        if (slug) where.slug = { $ne: slug };
+
+        const totalPosts = await strapi.db
+          .query("api::blog.blog")
+          .count({ where });
 
         if (totalPosts === 0) {
           return ctx.notFound("No posts found");
@@ -27,6 +35,7 @@ export default factories.createCoreController(
             cover: true,
             author: true,
           },
+          where,
         });
 
         return posts;
