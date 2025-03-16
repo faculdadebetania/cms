@@ -2,8 +2,8 @@ export default {
   routes: [
     {
       method: "GET",
-      path: "/blog/random",
-      handler: "random.random",
+      path: "/blog/count",
+      handler: "count.count",
       config: {
         auth: false,
       },
