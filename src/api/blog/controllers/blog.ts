@@ -38,9 +38,10 @@ export default factories.createCoreController(
           where,
         });
 
-        return posts;
+        return { data: posts };
       } catch (error) {
         ctx.throw(500, error);
+        return { error };
       }
     },
   }),
