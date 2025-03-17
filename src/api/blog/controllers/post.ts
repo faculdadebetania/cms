@@ -14,7 +14,12 @@ export default factories.createCoreController(
         const post = await strapi.db.query("api::blog.blog").findOne({
           populate: {
             cover: true,
-            author: true,
+            author: {
+              fields: ["id", "name", "description"],
+              populate: {
+                photo: true,
+              },
+            },
           },
           where,
         });
