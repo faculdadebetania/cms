@@ -76,7 +76,8 @@
       "enum": [
         "bacharelado",
         "pós-graduação",
-        "curso livre"
+        "curso livre",
+        "extensão"
       ],
       "required": true
     },
