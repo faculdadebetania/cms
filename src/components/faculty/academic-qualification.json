@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_faculty_academic_qualifications",
+  "info": {
+    "displayName": "Academic Qualification",
+    "icon": "book",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Qualification": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

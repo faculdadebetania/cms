@@ -4,35 +4,38 @@
   "info": {
     "singularName": "faculty",
     "pluralName": "faculties",
-    "displayName": "Faculty"
+    "displayName": "Faculty",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
   },
   "pluginOptions": {},
   "attributes": {
-    "academicBackground": {
-      "type": "text",
-      "required": true
-    },
     "name": {
       "type": "string",
       "required": true,
       "unique": false
     },
     "photo": {
-      "allowedTypes": [
-        "images"
-      ],
       "type": "media",
       "multiple": false,
-      "required": true
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
     },
     "courses": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::course.course",
       "mappedBy": "faculties"
+    },
+    "academicQualifications": {
+      "displayName": "Academic Qualification",
+      "type": "component",
+      "repeatable": true,
+      "component": "faculty.academic-qualification"
     }
   }
 }

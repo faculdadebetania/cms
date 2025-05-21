@@ -614,6 +614,7 @@ export interface ApiDocDoc extends Struct.CollectionTypeSchema {
 export interface ApiFacultyFaculty extends Struct.CollectionTypeSchema {
   collectionName: 'faculties';
   info: {
+    description: '';
     displayName: 'Faculty';
     pluralName: 'faculties';
     singularName: 'faculty';
@@ -622,7 +623,10 @@ export interface ApiFacultyFaculty extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
-    academicBackground: Schema.Attribute.Text & Schema.Attribute.Required;
+    academicQualifications: Schema.Attribute.Component<
+      'faculty.academic-qualification',
+      true
+    >;
     courses: Schema.Attribute.Relation<'manyToMany', 'api::course.course'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
