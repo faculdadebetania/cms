@@ -623,6 +623,7 @@ export interface ApiFacultyFaculty extends Struct.CollectionTypeSchema {
     draftAndPublish: false;
   };
   attributes: {
+    academicBackground: Schema.Attribute.Text;
     academicQualifications: Schema.Attribute.Component<
       'faculty.academic-qualification',
       true

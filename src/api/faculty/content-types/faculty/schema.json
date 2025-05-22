@@ -36,6 +36,9 @@
       "type": "component",
       "repeatable": true,
       "component": "faculty.academic-qualification"
+    },
+    "academicBackground": {
+      "type": "text"
     }
   }
 }
