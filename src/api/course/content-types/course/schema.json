@@ -65,7 +65,8 @@
       "pluginOptions": {},
       "type": "enumeration",
       "enum": [
-        "noturno"
+        "noturno",
+        "a sua escolha"
       ],
       "required": true,
       "default": "noturno"
