@@ -71,6 +71,10 @@
       "required": true,
       "default": "noturno"
     },
+    "periodDisclaimer": {
+      "pluginOptions": {},
+      "type": "string"
+    },
     "category": {
       "pluginOptions": {},
       "type": "enumeration",
