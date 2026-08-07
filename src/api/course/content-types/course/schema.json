@@ -29,6 +29,10 @@
       "required": true,
       "min": 1
     },
+    "durationDisclaimer": {
+      "pluginOptions": {},
+      "type": "string"
+    },
     "startDate": {
       "pluginOptions": {},
       "type": "date",
@@ -70,10 +74,6 @@
       ],
       "required": true,
       "default": "noturno"
-    },
-    "periodDisclaimer": {
-      "pluginOptions": {},
-      "type": "string"
     },
     "category": {
       "pluginOptions": {},
