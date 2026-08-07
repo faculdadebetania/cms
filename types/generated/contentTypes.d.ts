@@ -497,7 +497,7 @@ export interface ApiCourseCourse extends Struct.CollectionTypeSchema {
       Schema.Attribute.DefaultTo<'noturno'>;
     price: Schema.Attribute.Decimal & Schema.Attribute.Required;
     priceDisclaimer: Schema.Attribute.String;
-    periodDisclaimer: Schema.Attribute.String;
+    durationDisclaimer: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     slug: Schema.Attribute.UID<'name'> & Schema.Attribute.Required;
     startDate: Schema.Attribute.Date & Schema.Attribute.Required;
