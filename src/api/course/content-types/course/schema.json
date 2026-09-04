@@ -53,13 +53,13 @@
       "type": "customField",
       "default": "[]",
       "options": [
-        "seg.",
-        "ter.",
-        "qua.",
-        "qui.",
-        "sex.",
-        "sáb.",
-        "dom."
+        "segunda",
+        "terça",
+        "quarta",
+        "quinta",
+        "sexta",
+        "sábado",
+        "domingo"
       ],
       "customField": "plugin::multi-select.multi-select",
       "required": true,
